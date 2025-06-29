@@ -1,102 +1,121 @@
-import Image from "next/image";
+import Link from 'next/link';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-gray-50 text-gray-800">
+      {/* Navbar */}
+      <header className="flex justify-between items-center px-8 py-4 bg-white shadow-sm">
+        <div className="flex items-center space-x-2">
+          {/* logo */}
+          <span className="text-xl font-bold text-blue-600">SecurePixel</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <nav className="space-x-4">
+          <Link href="/iniciosecion" className="px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+            Iniciar Sesión
+          </Link>
+          <Link href="/registro" className="px-4 py-2 rounded-md text-blue-600 border border-blue-600 hover:bg-blue-50 transition-colors">
+            Registrarse
+          </Link>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="flex flex-col lg:flex-row items-center justify-center py-20 px-8 text-center lg:text-left">
+        <div className="max-w-xl lg:mr-16">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+            Aprende Ciberseguridad de Forma Inteligente
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            Plataforma educativa que utiliza inteligencia artificial y análisis
+            emocional para personalizar tu experiencia de aprendizaje de
+            ciberseguridad.
+          </p>
+          <div className="space-x-4">
+            <button className="px-6 py-3 rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors text-lg font-medium">
+              Comenzar Ahora
+            </button>
+            <button className="px-6 py-3 rounded-md text-blue-600 border border-blue-600 hover:bg-blue-50 transition-colors text-lg font-medium">
+              Conocer Más
+            </button>
+          </div>
+        </div>
+        <div className="mt-12 lg:mt-0 lg:ml-16">
+          {/* Logo Securepixel */}
+          <img
+            src="/imagenes/logosec.png"
+            alt="Ilustración de ciberseguridad"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      {/* Main Features Section */}
+      <section className="py-20 px-8 bg-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+          Características Principales
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Cuadro 1 */}
+          <div className="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+            <div className="flex justify-center mb-4">
+              <div className="p-1 bg-blue-100 rounded-full">
+                {/* icono png */}
+                <img
+                  src="/imagenes/aprendizaje.png"
+                  alt="Ilustración de ciberseguridad"
+                  className="w-2 h-2 md:w-15 md:h-15 rounded-full object-cover shadow-lg"
+                />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Aprendizaje Adaptativo</h3>
+            <p className="text-gray-600">
+              Contenido que se ajusta a tu nivel de conocimiento y estado emocional.
+            </p>
+          </div>
+
+          {/* Cuadro 2 */}
+          <div className="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+            <div class="flex justify-center mb-4"></div>
+            <div className="flex justify-center mb-4">
+              <div className="p-1 bg-blue-100 rounded-full">
+                {/* icono png */}
+                <img
+                  src="/imagenes/emociones.png"
+                  alt="Ilustración de ciberseguridad"
+                  className="w-2 h-2 md:w-15 md:h-15 rounded-full object-cover shadow-lg"
+                />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Análisis Emocional</h3>
+            <p className="text-gray-600">
+              Tecnología para optimizar tu experiencia de aprendizaje sobre ciberseguridad.
+            </p>
+          </div>
+
+          {/* cuadro 3*/}
+          <div className="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+            <div class="flex justify-center mb-4"> </div>
+            <div className="flex justify-center mb-4">
+               <div className="p-1 bg-blue-100 rounded-full">
+                {/* icono png */}
+                <img
+                  src="/imagenes/ia.png"
+                  alt="Ilustración de ciberseguridad"
+                  className="w-2 h-2 md:w-15 md:h-15 rounded-full object-cover shadow-lg"
+                />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">IA Generativa</h3>
+            <p className="text-gray-600">
+              Preguntas y ejercicios creados por inteligencia artificial según tus necesidades.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2023 SecurePixel - Sistema de Aprendizaje Inteligente de Ciberseguridad</p>
       </footer>
     </div>
   );
