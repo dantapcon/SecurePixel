@@ -73,9 +73,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Cuadro 2 */}
-          <div className="bg-gray-50 p-8 rounded-lg shadow-md text-center">
-            <div class="flex justify-center mb-4"></div>
+          {/* Cuadro 2 */}          <div className="bg-gray-50 p-8 rounded-lg shadow-md text-center">
             <div className="flex justify-center mb-4">
               <div className="p-1 bg-blue-100 rounded-full">
                 {/* icono png */}
@@ -94,7 +92,6 @@ export default function HomePage() {
 
           {/* cuadro 3*/}
           <div className="bg-gray-50 p-8 rounded-lg shadow-md text-center">
-            <div class="flex justify-center mb-4"> </div>
             <div className="flex justify-center mb-4">
                <div className="p-1 bg-blue-100 rounded-full">
                 {/* icono png */}
@@ -112,11 +109,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 text-center text-gray-500 text-sm">
-        <p>&copy; 2023 SecurePixel - Sistema de Aprendizaje Inteligente de Ciberseguridad</p>
-      </footer>
     </div>
   );
 }
